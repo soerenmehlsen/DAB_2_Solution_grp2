@@ -97,30 +97,6 @@ namespace DAB_2_Solution_grp2.Migrations
                     b.ToTable("Items");
                 });
 
-            modelBuilder.Entity("DAB_2_Solution_grp2.Models.Maintenance", b =>
-                {
-                    b.Property<int>("MaintenanceId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("MaintenanceId"), 1L, 1);
-
-                    b.Property<DateTime>("Date")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("Description")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int?>("ReservationId")
-                        .HasColumnType("int");
-
-                    b.HasKey("MaintenanceId");
-
-                    b.HasIndex("ReservationId");
-
-                    b.ToTable("Maintenances");
-                });
-
             modelBuilder.Entity("DAB_2_Solution_grp2.Models.Reservation", b =>
                 {
                     b.Property<int>("ReservationId")
@@ -137,9 +113,6 @@ namespace DAB_2_Solution_grp2.Migrations
 
                     b.Property<string>("Document")
                         .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("Maintenance")
-                        .HasColumnType("int");
 
                     b.Property<string>("Note")
                         .HasColumnType("nvarchar(max)");
@@ -221,15 +194,6 @@ namespace DAB_2_Solution_grp2.Migrations
                     b.Navigation("Reservation");
                 });
 
-            modelBuilder.Entity("DAB_2_Solution_grp2.Models.Maintenance", b =>
-                {
-                    b.HasOne("DAB_2_Solution_grp2.Models.Reservation", "Reservation")
-                        .WithMany("Maintenances")
-                        .HasForeignKey("ReservationId");
-
-                    b.Navigation("Reservation");
-                });
-
             modelBuilder.Entity("DAB_2_Solution_grp2.Models.User", b =>
                 {
                     b.HasOne("DAB_2_Solution_grp2.Models.Facility", "Facility")
@@ -258,8 +222,6 @@ namespace DAB_2_Solution_grp2.Migrations
             modelBuilder.Entity("DAB_2_Solution_grp2.Models.Reservation", b =>
                 {
                     b.Navigation("Facilities");
-
-                    b.Navigation("Maintenances");
 
                     b.Navigation("Users");
                 });

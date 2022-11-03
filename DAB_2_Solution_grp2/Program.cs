@@ -17,5 +17,6 @@ using (var context = new MyDbContext())
         Category = "PrivatePerson",
     };
     context.Add(user);
-    context.SaveChanges();
+    await context.SaveChangesAsync();
+    
 }

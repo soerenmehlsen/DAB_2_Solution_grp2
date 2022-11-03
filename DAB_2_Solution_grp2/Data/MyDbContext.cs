@@ -7,7 +7,6 @@ public class MyDbContext : DbContext
 {
     public DbSet<User>? Users { get; set; }
     public DbSet<Reservation>? Reservations { get; set; }
-    public DbSet<Maintenance>? Maintenances { get; set; }
     public DbSet<Item>? Items { get; set; }
     public DbSet<Facility>? Facilities { get; set; }
     public DbSet<Company>? Companies { get; set; }
