@@ -8,7 +8,7 @@ public class User
     public string? Email { get; set; }
     public string? Category { get; set; }
     
-    public int CompanyId { get; set; } // Foreign key
+    public int? CompanyId { get; set; } // Foreign key
     public List<Company>? Companies { get; set; } // Navigational property
 
     public Facility? Facility { get; set; } // Navigational property
