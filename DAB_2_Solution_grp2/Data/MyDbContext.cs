@@ -14,7 +14,7 @@ public class MyDbContext : DbContext
     
     protected override void OnConfiguring(DbContextOptionsBuilder options)
     {
-        options.UseSqlServer(@"Data Source=localhost;Database=friluftslivaarhus_grp2;User ID=SA;Password=Nicolai123.;TrustServerCertificate=True");
+        options.UseSqlServer(@"Data Source=localhost;Database=FriLuftsLivAarhus_opg2_DB;User ID=SA;Password=<YourStrong@Passw0rd>;TrustServerCertificate=True");
     }
     
     protected override void OnModelCreating(ModelBuilder modelBuilder) //Fluent API

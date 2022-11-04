@@ -2014,19 +2014,19 @@
     ]
   },
   "packageFolders": {
-    "/Users/sorenmehlsen/.nuget/packages/": {}
+    "/Users/kappel/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/sorenmehlsen/RiderProjects/DAB_2_Solution_grp2/DAB_2_Solution_grp2/DAB_2_Solution_grp2.csproj",
+      "projectUniqueName": "/Users/kappel/4. semester/DAB/2EfCore/DAB_2_Solution_grp2/DAB_2_Solution_grp2/DAB_2_Solution_grp2.csproj",
       "projectName": "DAB_2_Solution_grp2",
-      "projectPath": "/Users/sorenmehlsen/RiderProjects/DAB_2_Solution_grp2/DAB_2_Solution_grp2/DAB_2_Solution_grp2.csproj",
-      "packagesPath": "/Users/sorenmehlsen/.nuget/packages/",
-      "outputPath": "/Users/sorenmehlsen/RiderProjects/DAB_2_Solution_grp2/DAB_2_Solution_grp2/obj/",
+      "projectPath": "/Users/kappel/4. semester/DAB/2EfCore/DAB_2_Solution_grp2/DAB_2_Solution_grp2/DAB_2_Solution_grp2.csproj",
+      "packagesPath": "/Users/kappel/.nuget/packages/",
+      "outputPath": "/Users/kappel/4. semester/DAB/2EfCore/DAB_2_Solution_grp2/DAB_2_Solution_grp2/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/Users/sorenmehlsen/.nuget/NuGet/NuGet.Config"
+        "/Users/kappel/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
