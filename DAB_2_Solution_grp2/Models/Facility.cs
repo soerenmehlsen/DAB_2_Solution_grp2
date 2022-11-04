@@ -14,7 +14,4 @@ public class Facility
     public int ReservationId { get; set; } // Foreign Key
     public Reservation? Reservation { get; set; } // Navigational property
     
-    public int UserId { get; set; } // Foreign Key
-    public List<User>? Users { get; set; } // Navigational property
-    
 }

@@ -11,6 +11,5 @@ public class User
     public int? CompanyId { get; set; } // Foreign key
     public List<Company>? Companies { get; set; } // Navigational property
 
-    public Facility? Facility { get; set; } // Navigational property
-    public Reservation? Reservation { get; set; } // Navigational property
+    public List<Reservation> Reservations { get; set; }
 }

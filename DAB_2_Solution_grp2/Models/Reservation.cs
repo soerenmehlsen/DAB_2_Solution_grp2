@@ -10,7 +10,7 @@ public class Reservation
     public string? Document { get; set; }
     
     public int UserId { get; set; } // Foreign key
-    public List<User>? Users { get; set; } // Navigational property
+    public User? User { get; set; }
 
     public List<Facility>? Facilities { get; set; } // Navigational property
 }
