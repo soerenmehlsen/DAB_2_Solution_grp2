@@ -177,7 +177,9 @@ using (var context = new MyDbContext())
     //     .ToList();
     
     // Get all available facilities names and closest/"nærmeste" address
-    var query1 = context.Facilities.ToList();
+    var query1 = context.Facilities
+        .Select(x => new{x.FacilityKind, x.ClosestAddress})
+        .ToList();
 
     foreach (var a in query1)
     {
@@ -186,6 +188,7 @@ using (var context = new MyDbContext())
     
     // Get all facilities as a table of names and address ordered by their kind. (Alternatively: Get the number of facilities grouped by their kind)
     var query2 = context.Facilities
+        .Select(x => new{x.FacilityKind, x.ClosestAddress})
         .OrderBy(x => x.FacilityKind)
         .ToList();
     Console.WriteLine("");
@@ -194,14 +197,14 @@ using (var context = new MyDbContext())
         Console.WriteLine("Name: " + a.FacilityKind + " " + "Closest-address: " +  a.ClosestAddress);
     }
     
+    // Get a list of booked facilities name with the booking user (and possibly business) and the timeslot it is booked in.
     var query3 = context.Facilities
-        .Include(x => x.Reservation)
-        .ThenInclude(x => x.User)
+        .Select(x => new{x.FacilityKind, x.Reservation.DateIn, x.Reservation.DateOut, x.Reservation.User.Name})
         .ToList();
     Console.WriteLine("");
     foreach (var a in query3)
     {
-        Console.WriteLine("Name: " + a.FacilityKind + " " + "User: " + a.Reservation.User.Name + "," + "DateIn: " + a.Reservation.DateIn + "," + "DateOut " + a.Reservation.DateOut);
+        Console.WriteLine("Name: " + a.FacilityKind + " " + "User: " + a.Name + "," + "DateIn: " + a.DateIn + "," + "DateOut " + a.DateOut);
     }
 }
 #endregion

@@ -18,6 +18,9 @@ public class MyDbContext : DbContext
     
     protected override void OnModelCreating(ModelBuilder modelBuilder) //Fluent API
     {
+        //modelBuilder.Entity<Facility>()
+            //.Property(p => p.ClosestAddress)
+            //.HasColumnName("GPS coordinates");
 
     }
 }
